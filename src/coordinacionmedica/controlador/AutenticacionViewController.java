@@ -10,6 +10,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 /**
  * FXML Controller class
@@ -22,6 +24,10 @@ public class AutenticacionViewController implements Initializable {
     private Label lblErrorUsuario;
     @FXML
     private Label lblErrorContrasenia;
+    @FXML
+    private TextField tftUsuario;
+    @FXML
+    private PasswordField tftContrasenia;
 
     /**
      * Initializes the controller class.
@@ -35,4 +41,18 @@ public class AutenticacionViewController implements Initializable {
     private void handleBtnIngresar(ActionEvent event) {
     }
     
+    private boolean sonCamposVacios(){
+        boolean esValido = true;
+        lblErrorUsuario.setText("");
+        lblErrorContrasenia.setText("");
+        if(tftUsuario.getText().isEmpty()){
+            lblErrorUsuario.setText ("El nombre de usuario es obligatorio");
+            esValido = false;
+        }
+        if(tftContrasenia.getText().isEmpty()){
+            lblErrorContrasenia.setText("Debes ingresar la contraseña6");
+            esValido = false;
+        }
+        return esValido;
+    }
 }
