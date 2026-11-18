@@ -4,9 +4,12 @@
  */
 package coordinacionmedica;
 
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
@@ -20,7 +23,17 @@ public class CoordinacionMedica extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-        System.out.println("Pruebaaaaa");
+        try {
+            Parent vista = FXMLLoader.load(getClass().getResource("/coordinacionmedica/vista/AutenticacionView.fxml"));
+            Scene escena = new Scene(vista);
+            primaryStage.setScene((escena));
+            primaryStage.setTitle("Inicio de sesion");
+            primaryStage.show();
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+        
+              
     }
 
     /**
