@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/26" fx:controller="coordinacionmedica.controlador.AutenticacionViewController">
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="coordinacionmedica.controlador.AutenticacionViewController">
    <children>
       <Pane prefHeight="450.0" prefWidth="300.0">
          <children>
@@ -36,16 +35,19 @@
             </Label>
             <Label layoutX="14.0" layoutY="125.0" text="Usuario">
                <font>
-                  <Font size="13.0" />
+                  <Font size="15.0" />
                </font>
             </Label>
             <TextField fx:id="tftUsuario" layoutX="14.0" layoutY="144.0" prefHeight="38.0" prefWidth="274.0" promptText="Ej: jperez" />
             <Label layoutX="14.0" layoutY="216.0" text="Contraseña">
                <font>
-                  <Font size="13.0" />
+                  <Font size="15.0" />
                </font>
             </Label>
-            <Button layoutX="14.0" layoutY="319.0" mnemonicParsing="false" onAction="#handleBtnIngresar" prefHeight="49.0" prefWidth="274.0" style="-fx-background-color: #7FFFD4;" text="Ingresar" />
+            <Button layoutX="14.0" layoutY="310.0" mnemonicParsing="false" onAction="#handleBtnIngresar" prefHeight="58.0" prefWidth="274.0" style="-fx-background-color: #7FFFD4;" text="Ingresar">
+               <font>
+                  <Font size="26.0" />
+               </font></Button>
             <Label fx:id="lblErrorUsuario" layoutX="14.0" layoutY="189.0" textFill="RED" />
             <Label fx:id="lblErrorContrasenia" layoutX="14.0" layoutY="278.0" textFill="RED" />
             <PasswordField fx:id="tftContrasenia" layoutX="14.0" layoutY="242.0" prefHeight="38.0" prefWidth="274.0" />
