@@ -34,7 +34,7 @@ public class AutenticacionService {
             return respuesta;
         }
         String contraseniaCifrado = Utilidades.generarCifradoSHA256(contrasenia);
-        int idUsuario = contrato.verificarCredenciales(nombreUsuario, contrasenia);
+        int idUsuario = contrato.verificarCredenciales(nombreUsuario, contraseniaCifrado);
         if(idUsuario == CREDENCIALES_INCORRECTAS){
             respuesta.setCredencialesCorrectas(false);
             respuesta.setMensaje("El nombre de usuario o contraseña son incorrectos."
@@ -48,7 +48,7 @@ public class AutenticacionService {
             Usuario info = contrato.obtenerInformacionUsuario(idUsuario);
             respuesta.setUsuario(info);
             respuesta.setMensaje("Hola, "
-                + info.getNombre() + " al Sistema de la Coordinacion Medica");
+                + info.getNombre() + "  bienvenido al Sistema de la Coordinacion Medica");
             return respuesta;
         }
         respuesta.setCredencialesCorrectas(true);

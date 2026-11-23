@@ -5,6 +5,7 @@
 package coordinacionmedica.controlador;
 
 import coordinacionmedica.CoordinacionMedica;
+import coordinacionmedica.modelo.dao.AutenticacionDAO;
 import coordinacionmedica.servicio.AutenticacionService;
 import coordinacionmedica.servicio.pojo.Autenticacion;
 import coordinacionmedica.servicio.pojo.Usuario;
@@ -50,6 +51,11 @@ public class AutenticacionViewController implements Initializable {
 
     @FXML
     private void handleBtnIngresar(ActionEvent event) {
+        String nombreUsuario  = tftUsuario.getText();
+        String contrasenia = tftContrasenia.getText();
+        if(sonCamposVacios()){
+            validarCredenciales(nombreUsuario, contrasenia);
+        }
     }
     
     private void validarCredenciales(String nombreUsuario, String contrasenia){
