@@ -4,10 +4,18 @@
  */
 package coordinacionmedica.servicio.interfaz;
 
+import coordinacionmedica.servicio.pojo.Usuario;
+import coordinacionmedica.servicio.pojo.UsuarioEstatus;
+
 /**
  *
  * @author andre
  */
 public interface IAutenticacionRepository {
     
+    public int verificarCredenciales(String nombreUsuario, String contrasenia) throws RuntimeException;
+    
+    public UsuarioEstatus verificarEstatusUsuario(int idUsuario);
+    
+    public Usuario obtenerInformacionUsuario(int idUsuario);
 }
