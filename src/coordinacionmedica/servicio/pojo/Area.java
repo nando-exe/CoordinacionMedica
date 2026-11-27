@@ -8,27 +8,26 @@ package coordinacionmedica.servicio.pojo;
  *
  * @author Mgg12
  */
+
 public class Area {
 
-    private int idArea;
+    private int numArea;
     private String nombre;
-    private int numeroEstudiantes;
 
     public Area() {
     }
 
-    public Area(int idArea, String nombre, int numeroEstudiantes) {
-        this.idArea = idArea;
+    public Area(int numArea, String nombre) {
+        this.numArea = numArea;
         this.nombre = nombre;
-        this.numeroEstudiantes = numeroEstudiantes;
     }
 
-    public int obtenerIdArea() {
-        return idArea;
+    public int obtenerNumArea() {
+        return numArea;
     }
 
-    public void establecerIdArea(int idArea) {
-        this.idArea = idArea;
+    public void establecerNumArea(int numArea) {
+        this.numArea = numArea;
     }
 
     public String obtenerNombre() {
@@ -38,13 +37,4 @@ public class Area {
     public void establecerNombre(String nombre) {
         this.nombre = nombre;
     }
-
-    public int obtenerNumeroEstudiantes() {
-        return numeroEstudiantes;
-    }
-
-    public void establecerNumeroEstudiantes(int numeroEstudiantes) {
-        this.numeroEstudiantes = numeroEstudiantes;
-    }
 }
-

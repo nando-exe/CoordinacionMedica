@@ -9,36 +9,29 @@ package coordinacionmedica.servicio.pojo;
  * @author Mgg12
  */
 public class Constancia {
-   
+
     private int idConstancia;
+    private int idInscripcion;
     private String folio;
-    private int idCurso;
-    private int idEstudiante;
-    private String nombreEstudiante;
-    private String matricula;
-    private String nombreCurso;
-    private String horarioCurso;
     private String fechaEmision;
-    private int idEstatus;
-    private String estatus;
+    private String nombreCurso;
+    private String nombreEstudiante;
+    private String periodo;
+    private ConstanciaEstado estado;
 
     public Constancia() {
     }
 
-    public Constancia(int idConstancia, String folio, int idCurso, int idEstudiante,
-            String nombreEstudiante, String matricula, String nombreCurso, String horarioCurso,
-            String fechaEmision, int idEstatus, String estatus) {
+    public Constancia(int idConstancia, int idInscripcion, String folio, String fechaEmision,
+            String nombreCurso, String nombreEstudiante, String periodo, ConstanciaEstado estado) {
         this.idConstancia = idConstancia;
+        this.idInscripcion = idInscripcion;
         this.folio = folio;
-        this.idCurso = idCurso;
-        this.idEstudiante = idEstudiante;
-        this.nombreEstudiante = nombreEstudiante;
-        this.matricula = matricula;
-        this.nombreCurso = nombreCurso;
-        this.horarioCurso = horarioCurso;
         this.fechaEmision = fechaEmision;
-        this.idEstatus = idEstatus;
-        this.estatus = estatus;
+        this.nombreCurso = nombreCurso;
+        this.nombreEstudiante = nombreEstudiante;
+        this.periodo = periodo;
+        this.estado = estado;
     }
 
     public int obtenerIdConstancia() {
@@ -49,60 +42,20 @@ public class Constancia {
         this.idConstancia = idConstancia;
     }
 
+    public int obtenerIdInscripcion() {
+        return idInscripcion;
+    }
+
+    public void establecerIdInscripcion(int idInscripcion) {
+        this.idInscripcion = idInscripcion;
+    }
+
     public String obtenerFolio() {
         return folio;
     }
 
     public void establecerFolio(String folio) {
         this.folio = folio;
-    }
-
-    public int obtenerIdCurso() {
-        return idCurso;
-    }
-
-    public void establecerIdCurso(int idCurso) {
-        this.idCurso = idCurso;
-    }
-
-    public int obtenerIdEstudiante() {
-        return idEstudiante;
-    }
-
-    public void establecerIdEstudiante(int idEstudiante) {
-        this.idEstudiante = idEstudiante;
-    }
-
-    public String obtenerNombreEstudiante() {
-        return nombreEstudiante;
-    }
-
-    public void establecerNombreEstudiante(String nombreEstudiante) {
-        this.nombreEstudiante = nombreEstudiante;
-    }
-
-    public String obtenerMatricula() {
-        return matricula;
-    }
-
-    public void establecerMatricula(String matricula) {
-        this.matricula = matricula;
-    }
-
-    public String obtenerNombreCurso() {
-        return nombreCurso;
-    }
-
-    public void establecerNombreCurso(String nombreCurso) {
-        this.nombreCurso = nombreCurso;
-    }
-
-    public String obtenerHorarioCurso() {
-        return horarioCurso;
-    }
-
-    public void establecerHorarioCurso(String horarioCurso) {
-        this.horarioCurso = horarioCurso;
     }
 
     public String obtenerFechaEmision() {
@@ -113,19 +66,35 @@ public class Constancia {
         this.fechaEmision = fechaEmision;
     }
 
-    public int obtenerIdEstatus() {
-        return idEstatus;
+    public String obtenerNombreCurso() {
+        return nombreCurso;
     }
 
-    public void establecerIdEstatus(int idEstatus) {
-        this.idEstatus = idEstatus;
+    public void establecerNombreCurso(String nombreCurso) {
+        this.nombreCurso = nombreCurso;
     }
 
-    public String obtenerEstatus() {
-        return estatus;
+    public String obtenerNombreEstudiante() {
+        return nombreEstudiante;
     }
 
-    public void establecerEstatus(String estatus) {
-        this.estatus = estatus;
+    public void establecerNombreEstudiante(String nombreEstudiante) {
+        this.nombreEstudiante = nombreEstudiante;
+    }
+
+    public String obtenerPeriodo() {
+        return periodo;
+    }
+
+    public void establecerPeriodo(String periodo) {
+        this.periodo = periodo;
+    }
+
+    public ConstanciaEstado obtenerEstado() {
+        return estado;
+    }
+
+    public void establecerEstado(ConstanciaEstado estado) {
+        this.estado = estado;
     }
 }

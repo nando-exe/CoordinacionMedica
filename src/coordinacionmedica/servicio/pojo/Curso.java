@@ -8,26 +8,24 @@ package coordinacionmedica.servicio.pojo;
  *
  * @author Mgg12
  */
+
 public class Curso {
 
     private int idCurso;
     private String nombre;
     private String descripcion;
     private String horario;
-    private int idEstatus;
-    private String estatus;
+    private boolean estado;
 
     public Curso() {
     }
 
-    public Curso(int idCurso, String nombre, String descripcion, String horario, int idEstatus,
-            String estatus) {
+    public Curso(int idCurso, String nombre, String descripcion, String horario, boolean estado) {
         this.idCurso = idCurso;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.horario = horario;
-        this.idEstatus = idEstatus;
-        this.estatus = estatus;
+        this.estado = estado;
     }
 
     public int obtenerIdCurso() {
@@ -62,20 +60,11 @@ public class Curso {
         this.horario = horario;
     }
 
-    public int obtenerIdEstatus() {
-        return idEstatus;
+    public boolean obtenerEstado() {
+        return estado;
     }
 
-    public void establecerIdEstatus(int idEstatus) {
-        this.idEstatus = idEstatus;
-    }
-
-    public String obtenerEstatus() {
-        return estatus;
-    }
-
-    public void establecerEstatus(String estatus) {
-        this.estatus = estatus;
+    public void establecerEstado(boolean estado) {
+        this.estado = estado;
     }
 }
-
