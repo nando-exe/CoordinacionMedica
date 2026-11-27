@@ -85,7 +85,7 @@ public class AutenticacionViewController implements Initializable {
             esValido = false;
         }
         if(tftContrasenia.getText().isEmpty()){
-            lblErrorContrasenia.setText("Debes ingresar la contraseña6");
+            lblErrorContrasenia.setText("Debes ingresar la contraseña");
             esValido = false;
         }
         return esValido;
